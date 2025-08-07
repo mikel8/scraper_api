@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 app = FastAPI()
 
-API_KEY = "scrape_api_key
+API_KEY = "scrape_api_key"
 
 class ScrapeRequest(BaseModel):
     url: str
