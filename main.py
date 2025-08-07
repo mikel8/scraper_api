@@ -8,6 +8,10 @@ app = FastAPI()
 class ScrapeRequest(BaseModel):
     url: str
 
+@app.get("/")
+def read_root():
+    return {"message": "API is up and running!"}
+
 @app.post("/scrape")
 async def scrape_profile(data: ScrapeRequest):
     try:
